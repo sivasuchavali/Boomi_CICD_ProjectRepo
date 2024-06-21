@@ -14,7 +14,7 @@ on:
 jobs:
   development:
     name: Development Deployment
-    runs-on: self-hosted # ubuntu-latest  # self-hosted
+    runs-on: ubuntu-latest  # self-hosted
     environment: development
  
     env:
@@ -89,7 +89,7 @@ jobs:
 
   stage:
     name: Stage Deployment
-    runs-on: self-hosted
+    runs-on: ubuntu-latest  # self-hosted
     needs: development
 
     environment: stage
@@ -143,7 +143,7 @@ jobs:
 
   production:
     name: Production Deployment
-    runs-on: self-hosted
+    runs-on: ubuntu-latest  # self-hosted
     needs: [development, stage]
 
     environment: production
