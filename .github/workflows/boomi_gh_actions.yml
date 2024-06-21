@@ -18,7 +18,7 @@ jobs:
     environment: development
  
     env:
-      BOOMI_ENVIRONMENT_NAME: "Test Cloud Environment"
+      BOOMI_ENVIRONMENT_NAME: "Test Clouds"
       BOOMI_ATOM_NAME: "Test Atom Cloud"
       BOOMI_ACCOUNT_ID: ${{ vars.BOOMI_ACCOUNT_ID }}
       BOOMI_BASE_URL: ${{ vars.BOOMI_BASE_URL }}
@@ -95,7 +95,7 @@ jobs:
     environment: stage
 
     env:
-      BOOMI_ENVIRONMENT_NAME: "ADO Stage"
+      BOOMI_ENVIRONMENT_NAME: "Local_Dev"
       BOOMI_ACCOUNT_ID: ${{ vars.BOOMI_ACCOUNT_ID }}
       BOOMI_BASE_URL: ${{ vars.BOOMI_BASE_URL }}
       BOOMI_USERNAME: ${{ vars.BOOMI_USERNAME }}
@@ -149,7 +149,7 @@ jobs:
     environment: production
 
     env:
-      BOOMI_ENVIRONMENT_NAME: "ADO Production"
+      BOOMI_ENVIRONMENT_NAME: "Prod Clouds"
       BOOMI_ACCOUNT_ID: ${{ vars.BOOMI_ACCOUNT_ID }}
       BOOMI_BASE_URL: ${{ vars.BOOMI_BASE_URL }}
       BOOMI_USERNAME: ${{ vars.BOOMI_USERNAME }}
