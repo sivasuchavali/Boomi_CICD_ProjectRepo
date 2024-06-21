@@ -18,8 +18,8 @@ jobs:
     environment: development
  
     env:
-      BOOMI_ENVIRONMENT_NAME: "Test Clouds"
-      BOOMI_ATOM_NAME: "Test Atom Cloud"
+      BOOMI_ENVIRONMENT_NAME: "Local_Dev"
+      BOOMI_ATOM_NAME: "Siva-Local-Windows-Atom"
       BOOMI_ACCOUNT_ID: ${{ vars.BOOMI_ACCOUNT_ID }}
       BOOMI_BASE_URL: ${{ vars.BOOMI_BASE_URL }}
       BOOMI_USERNAME: ${{ vars.BOOMI_USERNAME }}
@@ -95,7 +95,7 @@ jobs:
     environment: stage
 
     env:
-      BOOMI_ENVIRONMENT_NAME: "Local_Dev"
+      BOOMI_ENVIRONMENT_NAME: "Test Clouds"
       BOOMI_ACCOUNT_ID: ${{ vars.BOOMI_ACCOUNT_ID }}
       BOOMI_BASE_URL: ${{ vars.BOOMI_BASE_URL }}
       BOOMI_USERNAME: ${{ vars.BOOMI_USERNAME }}
