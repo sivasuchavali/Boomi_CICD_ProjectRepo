@@ -12,7 +12,7 @@
         "packageVersion": "1.40",
         "componentId": "069e88bf-354b-4202-80db-4046031f1eef",
         "notes": "This is an example set of notes",
-        "listenerStatus": "RUNNING"
+        "listenerStatus": "RUNNING" 
       },
       {
         "processName": "Salesforce to NetSuite Accounts",
