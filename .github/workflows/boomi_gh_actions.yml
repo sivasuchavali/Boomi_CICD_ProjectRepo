@@ -14,12 +14,12 @@ on:
 jobs:
   development:
     name: Development Deployment
-    runs-on: self-hosted # ubuntu-latest  # self-hosted
+    runs-on: ubuntu-latest  # self-hosted
     environment: development
  
     env:
-      BOOMI_ENVIRONMENT_NAME: "Test Cloud Environment"
-      BOOMI_ATOM_NAME: "Test Atom Cloud"
+      BOOMI_ENVIRONMENT_NAME: "Local_Dev"
+      BOOMI_ATOM_NAME: "Siva-Local-Windows-Atom"
       BOOMI_ACCOUNT_ID: ${{ vars.BOOMI_ACCOUNT_ID }}
       BOOMI_BASE_URL: ${{ vars.BOOMI_BASE_URL }}
       BOOMI_USERNAME: ${{ vars.BOOMI_USERNAME }}
@@ -70,7 +70,7 @@ jobs:
       - name: Checkout Boomi CICD Library
         uses: actions/checkout@v4
         with:
-          repository: adambedenbaugh/boomi-cicd-cli-py
+          repository: sivasuchavali/Boomi_CICD_Demo
           token: ${{ secrets.BOOMI_CICD_LIBRARY_PAT }}
           path: boomi-cicd-cli-py
 
@@ -89,13 +89,13 @@ jobs:
 
   stage:
     name: Stage Deployment
-    runs-on: self-hosted
+    runs-on: ubuntu-latest  # self-hosted
     needs: development
 
     environment: stage
 
     env:
-      BOOMI_ENVIRONMENT_NAME: "ADO Stage"
+      BOOMI_ENVIRONMENT_NAME: "Test Clouds"
       BOOMI_ACCOUNT_ID: ${{ vars.BOOMI_ACCOUNT_ID }}
       BOOMI_BASE_URL: ${{ vars.BOOMI_BASE_URL }}
       BOOMI_USERNAME: ${{ vars.BOOMI_USERNAME }}
@@ -124,7 +124,7 @@ jobs:
       - name: Checkout Boomi CICD Library
         uses: actions/checkout@v4
         with:
-          repository: adambedenbaugh/boomi-cicd-cli-py
+          repository: sivasuchavali/Boomi_CICD_Demo
           token: ${{ secrets.BOOMI_CICD_LIBRARY_PAT }}
           path: boomi-cicd-cli-py
 
@@ -143,13 +143,13 @@ jobs:
 
   production:
     name: Production Deployment
-    runs-on: self-hosted
+    runs-on: ubuntu-latest  # self-hosted
     needs: [development, stage]
 
     environment: production
 
     env:
-      BOOMI_ENVIRONMENT_NAME: "ADO Production"
+      BOOMI_ENVIRONMENT_NAME: "Prod Clouds"
       BOOMI_ACCOUNT_ID: ${{ vars.BOOMI_ACCOUNT_ID }}
       BOOMI_BASE_URL: ${{ vars.BOOMI_BASE_URL }}
       BOOMI_USERNAME: ${{ vars.BOOMI_USERNAME }}
@@ -177,7 +177,7 @@ jobs:
       - name: Checkout Boomi CICD Library
         uses: actions/checkout@v4
         with:
-          repository: adambedenbaugh/boomi-cicd-cli-py
+          repository: sivasuchavali/Boomi_CICD_Demo
           token: ${{ secrets.BOOMI_CICD_LIBRARY_PAT }}
           path: boomi-cicd-cli-py
 

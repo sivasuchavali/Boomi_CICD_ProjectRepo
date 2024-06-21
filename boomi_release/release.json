@@ -1,0 +1,11 @@
+{
+    "pipelines": [
+      {
+        "processName": "Test Process CI CD ",
+        "packageVersion": "1.0",
+        "componentId": "3341de6f-7339-4c94-85d8-3139457a8832",
+        "notes": "Base version",
+        "schedule": "0 0 1 * * * ; 30 0 2-7 * * *"
+      }
+    ]
+  }
